@@ -6,8 +6,8 @@ export default function Home() {
     return (
         <div>
             <Header />
-            <p> home page!</p>
+            {/* <p> home page!</p> */}
             <Footer/>
         </div> 
-    )
+    );
 }

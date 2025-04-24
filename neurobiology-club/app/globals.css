@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: #F4F3F2;
+  --foreground: black;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Header Stylings */
+nav a:hover {
+  font-weight: bold;
+  color: #164EFF;
+}
+
+nav a.active {
+  color: #164EFF;
+  border: 1.75px solid #164EFF;
+  font-weight: bold;
+  border-radius: 100px;
+  padding: 0.55rem 1rem;
+}
+
+#mentorship {
+  color: #164EFF;
+  background-color: #F3FF99;
+  border-radius: 100px;
+  padding: 0.55rem 1rem;
+}
