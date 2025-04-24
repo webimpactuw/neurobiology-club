@@ -12,8 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Neurobiology Club @ UW",
+  title: "UW Neurobiology",
   description: "Website created by Aliyah Mcrae, Hao Le, Gabe Tanumihardja, and Ava Nunes",
+  icons: {icon: '/logo.svg'}
 };
 
 export default function RootLayout({ children }) {
