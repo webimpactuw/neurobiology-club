@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter ({
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
+
 export const metadata = {
   title: "UW Neurobiology",
   description: "Website created by Aliyah Mcrae, Hao Le, Gabe Tanumihardja, and Ava Nunes",
@@ -21,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>
