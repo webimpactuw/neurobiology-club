@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { client } from "@/sanity/lib/client";
@@ -9,8 +10,36 @@ export default async function Team() {
     return (
         <div>
             <Header />
-            <div className = "pb-16 w-64">
-               <p id="board-members">BOARD MEMBERS</p> 
+            <div className="flex items-center justify-center">
+                {/* Neuron needs to be flipped */}
+                <Image src = "/Neuron-home.png"
+                    alt = "Neuron"
+                    width = {550}
+                    height = {550}
+                    className = ""
+                />
+                <div className="ml-8">
+                    <div className="flex items-center justify-end w-full">
+                       <p id="big-text">M</p> 
+                       <p id="big-text">E</p>
+                       <p id="big-text">E</p>
+                       <p id="big-text">T</p>
+                    </div>
+                    <div className="flex items-center justify-end w-full">
+                        <p id="big-text">T</p>
+                        <p id="big-text">H</p>
+                        <p id="big-text">E</p>
+                        <p className="mx-4"> </p>
+                        <p id="big-text">T</p>
+                        <p id="big-text">E</p>
+                        <p id="big-text">A</p>
+                        <p id="big-text">M</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className = "pb-14 flex items-center justify-center">
+               <button id="board-members">BOARD MEMBERS</button> 
             </div>
             
             <div className="min-h-screen grid place-items-center pt-5">
