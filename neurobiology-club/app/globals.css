@@ -20,6 +20,13 @@ body {
 }
 
 /* Header Stylings */
+#gradient {
+  width: 100%;
+  height: 130px;
+  margin-top: -75px;
+  background: linear-gradient(0deg, rgba(244,243,242,0) 0%, rgba(244,243,242,1) 32%);
+}
+
 nav a:hover {
   font-weight: bold;
   color: #164EFF;
@@ -33,9 +40,59 @@ nav a.active {
   padding: 0.55rem 1rem;
 }
 
+/* Neuron Image + Text Stylings */
+#big-text {
+  color: #164EFF;
+  font-size: 5em;
+  letter-spacing: 0.3em;
+  font-weight: bold;
+}
+
+#big-text:hover {
+  color: #F3FF99;
+}
+
 #mentorship {
   color: #164EFF;
   background-color: #F3FF99;
   border-radius: 100px;
   padding: 0.55rem 1rem;
+  transition: color 0.5s ease-in-out;
+}
+
+/* People Page Stylings */
+#circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border-width: 4px;
+  border-color: #F3FF99; 
+  align-self: center;
+}
+
+#name {
+  padding-top: 5px;
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#role {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+}
+
+#board-members {
+  background-color: #F3FF99;
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
