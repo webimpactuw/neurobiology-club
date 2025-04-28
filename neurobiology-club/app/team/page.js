@@ -12,7 +12,7 @@ export default async function Team() {
             <Header />
             <div className="flex items-center justify-center">
                 {/* Neuron needs to be flipped */}
-                <Image src = "/Neuron-home.png"
+                <Image src = "/Neuron-Team.png"
                     alt = "Neuron"
                     width = {550}
                     height = {550}
