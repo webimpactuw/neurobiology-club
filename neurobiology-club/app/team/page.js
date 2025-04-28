@@ -11,7 +11,6 @@ export default async function Team() {
         <div>
             <Header />
             <div className="flex items-center justify-center">
-                {/* Neuron needs to be flipped */}
                 <Image src = "/Neuron-Team.png"
                     alt = "Neuron"
                     width = {550}
@@ -19,7 +18,7 @@ export default async function Team() {
                     className = ""
                 />
                 <div className="ml-8">
-                    <div className="flex items-center justify-end w-full">
+                    <div className="flex items-center justify-end w-full pt-32">
                        <p id="big-text">M</p> 
                        <p id="big-text">E</p>
                        <p id="big-text">E</p>
