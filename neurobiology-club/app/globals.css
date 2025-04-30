@@ -40,6 +40,14 @@ nav a.active {
   padding: 0.55rem 1rem;
 }
 
+#mentorship {
+  color: #164EFF;
+  background-color: #F3FF99;
+  border-radius: 100px;
+  padding: 0.55rem 1rem;
+  transition: color 0.5s ease-in-out;
+}
+
 /* Neuron Image + Text Stylings */
 #big-text {
   color: #164EFF;
@@ -52,12 +60,18 @@ nav a.active {
   color: #F3FF99;
 }
 
-#mentorship {
-  color: #164EFF;
-  background-color: #F3FF99;
-  border-radius: 100px;
-  padding: 0.55rem 1rem;
-  transition: color 0.5s ease-in-out;
+/* Home Page Stylings */
+
+#who-we-are {
+  background-color: #164EFF;
+  color: #F3FF99;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /* People Page Stylings */
@@ -98,3 +112,7 @@ nav a.active {
 }
 
 /* Events Page Stylings */
+
+/* Mentorship Page Stylings */
+
+/* Contact Page Stylings */

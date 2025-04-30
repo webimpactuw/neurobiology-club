@@ -10,14 +10,14 @@ export default function Footer() {
 
       <div className="flex items-center mr-32">
         <Link href="https://www.instagram.com/uwneurobiologyclub/#" target="_blank">
-          <Image src="/Instagram.png"
+          <Image src="/insta.svg"
             alt="Instagram logo + link"
             width = {50}
             height = {50}
             className = ""/>
         </Link>
         <Link href="https://discord.com/invite/bpRed7s5" target="_blank">
-          <Image src = "/Discord.png"
+          <Image src = "/discord.svg"
             alt="Discord logo + link"
             width = {40}
             height = {40}

@@ -38,6 +38,32 @@ export default function Home() {
                     className = ""
                 />
             </div>
+            
+            <div className="flex items-center justify-center">
+                <button id="who-we-are" className="mt-16"> WHO WE ARE</button>
+                <p></p>
+            </div>
+
+            <div className="flex items-center justify-center">
+                <p className="color-#164EFF font-bold">OUR MISSION</p>
+                <Image
+                    src = "/brain-logo.svg"
+                    alt = "old neurobiology club logo"
+                    width = {220}
+                    height = {220}
+                    id=""
+                />
+                <p></p>
+            </div>
+
+            <div className="flex items-center">
+                <div>
+                    {/* events */}
+                </div>
+                <div>
+                    {/* photo slideshows */}
+                </div>
+            </div>
             <Footer/>
         </div> 
     );
