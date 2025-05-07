@@ -62,7 +62,7 @@ nav a.active {
 
 /* Home Page Stylings */
 
-#who-we-are {
+#who-are-we {
   background-color: #164EFF;
   color: #F3FF99;
   text-align: center;
@@ -72,6 +72,28 @@ nav a.active {
   padding-top: 10px;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+#club-description {
+  color: #164EFF;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+#our-mission {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 120px;
+  padding-right: 142px;
+  padding-left: 142px;
 }
 
 /* People Page Stylings */
