@@ -62,7 +62,7 @@ nav a.active {
 
 /* Home Page Stylings */
 
-#who-we-are {
+#who-are-we {
   background-color: #164EFF;
   color: #F3FF99;
   text-align: center;
@@ -73,6 +73,31 @@ nav a.active {
   padding-right: 20px;
   padding-left: 20px;
 }
+
+#club-description {
+  color: #164EFF;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+#our-mission {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 120px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+
+
 
 /* People Page Stylings */
 #circle {
@@ -114,5 +139,92 @@ nav a.active {
 /* Events Page Stylings */
 
 /* Mentorship Page Stylings */
+#mentorship-program {
+  color: #164EFF;
+  text-align: center;
+  width: 972px;
+  font-weight: bold;
+  font-size: 5em;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#description-headers {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+#mentorship-description {
+  color: #164EFF;
+  text-align: center;
+  font-weight: medium;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 732px;
+}
+
+#grad-programs {
+  background-color: #F3FF99 ;
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/*MentorshipButtons component Stylings */
+#join-header {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+#mentorship-container {
+      max-width: 800px;
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      border: 1px solid #000000;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#button-group {
+        flex-direction: row;
+        justify-content: center;
+} 
+
+#mentorship-button {
+  padding: 10px 24px;
+  border: 2px solid #164EFF;
+  border-radius: 9999px;
+  background-color: white;
+  color: #164EFF;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#mentorship-button-text{
+  padding-bottom: 30px;
+  width: 708px
+}
 
 /* Contact Page Stylings */
