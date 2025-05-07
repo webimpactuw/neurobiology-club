@@ -96,6 +96,9 @@ nav a.active {
   padding-left: 142px;
 }
 
+
+
+
 /* People Page Stylings */
 #circle {
   width: 220px;
@@ -136,5 +139,50 @@ nav a.active {
 /* Events Page Stylings */
 
 /* Mentorship Page Stylings */
+#mentorship-program {
+  color: #164EFF;
+  text-align: center;
+  width: 972px;
+  font-weight: bold;
+  font-size: 5em;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#description-headers {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+#mentorship-description {
+  color: #164EFF;
+  text-align: center;
+  font-weight: medium;
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 354px;
+  padding-left: 354px;
+}
+
+#grad-programs {
+  background-color: #F3FF99 ;
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 /* Contact Page Stylings */
