@@ -55,11 +55,11 @@ export default async function Team() {
 
 async function getPeople() {
     const query = `*[_type == "people"] | order(order asc) {
-    image, 
-    name,
-    role,
-    order,
-  }`;
+        image, 
+        name,
+        role,
+        order,
+    }`;
 
   const person = await client.fetch(query);
   return person;
