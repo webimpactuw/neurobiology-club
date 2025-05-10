@@ -39,21 +39,37 @@ export default function Home() {
                 />
             </div>
             
-            <div className="flex items-center justify-center">
-                <button id="who-we-are" className="mt-16"> WHO WE ARE</button>
-                <p></p>
-            </div>
+            <div className="bg-gradient-to-t from-[#F3FF99] to-[#F4F3F2]">
+                <div className="justify-left ml-[142px]">
+                    <button id="who-we-are" className="mt-16"> WHO WE ARE</button>
+                    <p></p>
+                </div>
+                <div >
+                    <p id="club-description">
+                        THE NEUROBIOLOGY CLUB AT THE UNIVERSITY OF WASHINGTON SUPPORTS UNDERGRADUATE STUDENTS INTERESTED IN THE LIFE SCIENCES BY
+                        OFFERING A WIDE RANGE OF RESOURCES TO HELP THEM GET MORE
+                        INVOLVED IN THE NEUROBIOLOGY COMMUNITY.
+                    </p>
+                    <p id="club-description">
+                        WE ALSO AIM TO FOSTER MEANINGFUL CONNECTIONS AMONG STUDENTS WITH SHARED INTERESTS BY HOSTING SOCIAL EVENTS THROUGHOUT THE YEAR.
+                    </p>
+                    <p id="club-description">                          
+                        OUR PAST EVENTS INCLUDE NEUROSCIENCE MAJOR Q&A SESSIONS, RESEARCH INVOLVEMENT WORKSHOPS, AND PRE-HEALTH OR CAREER PANELS. WE'RE ALWAYS OPEN TO NEW IDEAS FROM OUR MEMBERS AND LOVE HEARING YOUR SUGGESTIONS!
+                    </p>
+                </div>
+                <div>
+                    <p id="our-mission">OUR MISSION</p>
+                </div>
 
-            <div className="flex items-center justify-center">
-                <p className="color-#164EFF font-bold">OUR MISSION</p>
-                <Image
-                    src = "/brain-logo.svg"
-                    alt = "old neurobiology club logo"
-                    width = {220}
-                    height = {220}
-                    id=""
-                />
-                <p></p>
+                <div className="flex items-center justify-center">
+                    <Image
+                        src = "/brain-logo.svg"
+                        alt = "old neurobiology club logo"
+                        width = {220}
+                        height = {220}
+                        id=""
+                    />
+                </div>
             </div>
 
             <div className="flex items-center">
