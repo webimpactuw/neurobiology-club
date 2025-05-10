@@ -8,10 +8,29 @@ export default function Mentorship() {
       <div>
         <Header />
           <div className="flex items-center justify-center">
-            <p id="mentorship-program"> 
-              MENTORSHIP 
-              PROGRAM
-            </p>
+            <div>
+              <div className="flex items-center">
+                <p id="big-text">M</p>
+                <p id="big-text">E</p>
+                <p id="big-text">N</p>
+                <p id="big-text">T</p>
+                <p id="big-text">O</p>
+                <p id="big-text">R</p>
+                <p id="big-text">S</p>
+                <p id="big-text">H</p>
+                <p id="big-text">I</p>
+                <p id="big-text">P</p>
+              </div>
+              <div className="flex justify-center">
+                <p id="big-text">P</p>
+                <p id="big-text">R</p>
+                <p id="big-text">O</p>
+                <p id="big-text">G</p>
+                <p id="big-text">R</p>
+                <p id="big-text">A</p>
+                <p id="big-text">M</p>
+              </div>
+            </div>  
           </div>
 
           <div className="flex items-center justify-center">

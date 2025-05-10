@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,9 +11,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const inter = Inter ({
+const nunito = Nunito_Sans ({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-nunito-sans',
 })
 
 export const metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${nunito.variable} antialiased`}
       >
         {children}
       </body>

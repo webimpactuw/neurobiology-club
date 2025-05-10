@@ -10,7 +10,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter);
+  font-family: var(--font-nunito-sans);
 }
 
 @layer utilities {
@@ -51,8 +51,8 @@ nav a.active {
 /* Neuron Image + Text Stylings */
 #big-text {
   color: #164EFF;
-  font-size: 5em;
-  letter-spacing: 0.3em;
+  font-size: 6em;
+  letter-spacing: 0.2em;
   font-weight: bold;
 }
 
@@ -77,7 +77,7 @@ nav a.active {
   color: #164EFF;
   text-align: left;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-right: 142px;
@@ -135,18 +135,6 @@ nav a.active {
 /* Events Page Stylings */
 
 /* Mentorship Page Stylings */
-#mentorship-program {
-  color: #164EFF;
-  text-align: center;
-  width: 972px;
-  font-weight: bold;
-  font-size: 5em;
-  padding-bottom: 10px;
-  padding-top: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
 #description-headers {
   color: #164EFF;
   text-align: center;
