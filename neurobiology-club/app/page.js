@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -41,7 +42,7 @@ export default function Home() {
             
             <div className="bg-gradient-to-t from-[#F3FF99] to-[#F4F3F2]">
                 <div className="justify-left ml-[142px] pb-4">
-                    <button id="who-we-are" className="mt-16"> WHO WE ARE</button>
+                    <button className="font-extrabold mt-16" id="blue-box"> WHO WE ARE</button>
                 </div>
 
                 <div id="club-description">
@@ -60,23 +61,35 @@ export default function Home() {
                     <p>LOVE HEARING YOUR SUGGESTIONS!</p> 
                 </div>
 
-                <div>
-                    <p id="our-mission">OUR MISSION</p>
+                <div className="flex items-center justify-center pt-16">
+                    <button className="font-extrabold" id="blue-box">OUR MISSION</button>
                 </div>
 
                 <div className="flex items-center justify-center">
                     <Image
                         src = "/brain-logo.svg"
                         alt = "old neurobiology club logo"
-                        width = {220}
-                        height = {220}
+                        width = {500}
+                        height = {500}
                         id=""
                     />
+                </div>
+
+                <div id="small-description">
+                    <p>The <b>NEUROBIOLOGY CLUB</b> at the University of Washington brings together students</p>
+                    <p>interested in neuroscience and related STEM fields.</p>
+                    <p>Our mission is to build a collabortive community that shares knowledge, supports academic</p>
+                    <p>growth, and connects members with research, career, and networking opportunities.</p>
                 </div>
             </div>
 
             <div className="flex items-center">
                 <div>
+                    <div className="flex items-center">
+                        <p className="font-extrabold" id="blue-header">UPCOMING EVENTS</p>  
+                        <Link href="/events" className="ml-32 mt-6">Go to the Events Page</Link>
+                    </div>
+                    
                     {/* events */}
                 </div>
                 <div>
