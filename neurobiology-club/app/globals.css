@@ -54,6 +54,7 @@ nav a.active {
   font-size: 6em;
   letter-spacing: 0.2em;
   font-weight: bold;
+  transition: color ease 0.2s
 }
 
 #big-text:hover {
@@ -183,3 +184,27 @@ nav a.active {
 }
 
 /* Contact Page Stylings */
+#hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#hover-bubble {
+  position: absolute;
+  top: 55%;
+  left: 75px;
+  z-index: 10;
+  transform: translateY(-10%);
+  background-color: white;
+  border: 1px solid #164EFF;
+  color: #164EFF;
+  border-radius: 100px;
+  padding: 4px 20px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity ease 0.2s;
+}
+
+#hover-wrapper:hover #hover-bubble {
+  opacity: 1;
+}
