@@ -67,11 +67,11 @@ export default function Home() {
 
                 <div className="flex items-center justify-center">
                     <Image
-                        src = "/brain-logo.svg"
+                        src = "/brain-logo.png"
                         alt = "old neurobiology club logo"
-                        width = {500}
-                        height = {500}
-                        id=""
+                        width = {200}
+                        height = {200}
+                        className="pt-16 pb-16"
                     />
                 </div>
 
