@@ -4,15 +4,21 @@ import { format } from "date-fns";
 
 export default function EventCard({ event }) {
   return (
-    <div>
-      <div>
-        <p>{event.date}</p>
-        <div>
-          <p>{event.name}</p>
-          <p>{event.location}</p>
-          <p>{event.time}</p>
+    <div className="border">
+      <div className="flex items-center justify-center">
+        <div className="font-bold">
+          {/* day is 28 month is 18 */}
+          <p>{format(new Date(event.date), "d")}</p>
+          <p>{format(new Date(event.date), "m")}</p>
         </div>
-        <p>{event.type}</p>
+        <div>
+          {/* will need to implement a conditional for the event type styling */}
+          <div className="flex items-center">
+            <p>{event.name}</p>
+            <button id="academic"> {event.type}</button>
+          </div>
+          <p className="text-[12]">{event.location} | {event.time}</p>
+        </div>
       </div>
 
       <div>
@@ -21,7 +27,7 @@ export default function EventCard({ event }) {
           alt = {event.name}
           width = {220}
           height = {220}
-          id=""
+          id="border"
         />
         
         <div>
