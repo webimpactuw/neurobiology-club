@@ -5,10 +5,11 @@ import { client } from "@/sanity/lib/client";
 import EventCard from "./components/EventCard";
 
 export default async function Events() {
-    const events = await getEvents();
+    const upcoming = await getUpcomingEvents();
+    const past = await getPastEvents();
 
     return (
-        <div>
+        <div className="">
             <Header />
             <div className="flex items-left justify-left">
                 <div className="ml-32">
@@ -22,20 +23,57 @@ export default async function Events() {
                     </div>
                 </div>
             </div>
-            <p id="event-headers" className="ml-32 mt-16">UPCOMING EVENTS</p>
             <div>
-                {events.map((event) => (
+               <p id="event-header" className="font-extrabold ml-32 mt-16 border-b border-black">UPCOMING EVENTS</p>
+               <div className="flex items-center pl-32 pt-4">
+                    <button id="academic">Academic</button>
+                    <button className="ml-4"id="networking">Networking</button>
+               </div>
+                <div>
+                    {upcoming.map((event) => (
+                        <EventCard key = {event.name} event = {event}/>
+                    ))}
+                </div> 
+            </div>
+            
+
+            <p id="event-header" className="font-extrabold ml-32 mt-16 border-b border-black">PAST EVENTS</p>
+            <div className="flex items-center pl-32 pt-4">
+                <button id="academic">Academic</button>
+                <button className="ml-4"id="networking">Networking</button>
+            </div>
+            <div>
+                {past.map((event) => (
                     <EventCard key = {event.name} event = {event}/>
                 ))}
-            </div>
+            </div> 
             <Footer/>
         </div> 
     )
 };
 
-async function getEvents() {
-    const query = `*[_type == "events"] {
+// make two queries, one for upcoming and one for past
+async function getUpcomingEvents() {
+    const query = `*[_type == "events" && date >= now()] | order(date asc) {
         date,
+        month,
+        name,
+        location,
+        time,
+        type,
+        image,
+        description,
+        link,
+    }`;
+
+    const event = await client.fetch(query);
+    return event;
+}
+
+async function getPastEvents() {
+    const query = `*[_type == "events" && date < now()] | order(date desc) {
+        date,
+        month,
         name,
         location,
         time,

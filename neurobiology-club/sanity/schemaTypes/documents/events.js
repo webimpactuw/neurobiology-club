@@ -7,6 +7,15 @@ export default {
       name: "date",
       title: "Date",
       type: "date",
+      options: {
+        dateFormat: 'MM-DD-YYYY'
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "month",
+      title: "3-Letter Abbreviated Month (all caps)",
+      type: "string",
       validation: (Rule) => Rule.required(),
     },
     {

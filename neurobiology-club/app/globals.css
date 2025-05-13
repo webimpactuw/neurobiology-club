@@ -135,6 +135,67 @@ nav a.active {
 }
 
 /* Events Page Stylings */
+#event-header {
+  color: #164EFF;
+  text-align: left;
+  font-size: 1.75em;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+#academic, #networking {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+}
+
+#academic:active {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #F3FF99;
+  border-color: #F3FF99;
+}
+
+#networking:active {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #BEFF99;
+  border-color: #BEFF99;
+}
+
+/* Event Card Stylings */
+#academic-box {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #F3FF99;
+  padding: 4px 10px;
+  font-size: 0.8em;
+}
+
+#networking-box {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #BEFF99;
+  padding: 4px 10px;
+  font-size: 0.8em;
+}
+
+#rsvp {
+  background-color: white;
+  color: #164EFF;
+  border: 1px solid #164EFF;
+  border-radius: 100px;
+  padding: 6px 48px;
+  font-size: 0.9em;
+}
+
+#rsvp:hover {
+  color: white;
+  background-color: #164EFF;
+}
 
 /* Mentorship Page Stylings */
 #description-headers {
