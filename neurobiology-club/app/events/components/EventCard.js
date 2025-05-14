@@ -19,6 +19,11 @@ export default function EventCard({ event }) {
         <div className="ml-8">
           <div className="flex items-center">
             <p className="font-semibold">{event.name}</p>
+            <button id="type-box">
+              <script>
+                document.getElementbyId("type-box").innerHTML;
+              </script>
+            </button>
             <button className="ml-4" id="academic-box"> {event.type}</button>
           </div>
           <p className="text-xs">{event.location} | {event.time}</p>
@@ -45,7 +50,3 @@ export default function EventCard({ event }) {
     </div>
   );
 }
-
-// need need a conditional to check to see if date has already passed
-  // if date has passed move to past events and remove button
-// implement dropdowns as well
