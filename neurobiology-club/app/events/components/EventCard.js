@@ -8,18 +8,21 @@ export default function EventCard({ event }) {
   const [isOpen, setIsOpen] = useState(false);
   const localDate = new Date(`${event.date}T12:00:00`);
   return (
-    <div className="pt-8 ml-36">
+    <div className="pt-8 pb-8 mx-28 border-b border-black">
       {/* Event Card Header */}
-      <div className="flex items-left justify-left cursor-pointer" 
+      <div className="flex items-left justify-left cursor-pointer mx-4" 
           onClick={() => setIsOpen(!isOpen)}>
         <div className="font-bold">
           <p className="text-xl">{format(localDate, "d")}</p>
           <p className="text-xs">{event.month}</p>
         </div>
-        <div className="ml-8">
+        <div className="ml-6">
           <div className="flex items-center">
             <p className="font-semibold">{event.name}</p>
-            <button className="ml-4" id="academic-box"> {event.type}</button>
+            <button id={event.type === "Academic" ? "academic-box" : event.type === "Networking" ? "networking-box" : ""}
+              className="ml-4">
+              {event.type}
+            </button>
           </div>
           <p className="text-xs">{event.location} | {event.time}</p>
         </div>
@@ -28,24 +31,23 @@ export default function EventCard({ event }) {
       {/* Event Card Body */}
       {isOpen && (
         <div className="flex mt-12">
-          <Image
-            src = {urlFor(event.image).auto("format").url()}
-            alt = {event.name}
-            width = {450}
-            height = {450}
-            id="border-2 border-black"
-          />
+          {event.image && (
+            <Image
+              src = {urlFor(event.image).auto("format").url()}
+              alt = {event.name}
+              width = {450}
+              height = {450}/>
+          )}
         
-          <div className="mt-2 ml-32 flex-col items-center">
-            <p className="mb-8">{event.description}</p>
-            <button href={event.link} target="_blank" id="rsvp">RSVP</button>
+          <div className={`${event.image ? "w-1/2 ml-32 items-center text-center" : "ml-12 w-full items-start text-left"} 
+            flex flex-col justify-center mt-2`}>
+            <div className="mt-2 flex-col items-center text-center">
+              <p className="mb-8">{event.description}</p>
+              <a href={event.link} target="_blank" id="rsvp">RSVP</a>
+            </div>
           </div>
         </div>
       )}
     </div>
   );
 }
-
-// need need a conditional to check to see if date has already passed
-  // if date has passed move to past events and remove button
-// implement dropdowns as well
