@@ -144,7 +144,7 @@ nav a.active {
   padding-left: 20px;
 }
 
-#academic, #networking {
+.academic, .networking {
   background-color: white;
   border: 1px solid black;
   border-radius: 100px;
@@ -152,18 +152,24 @@ nav a.active {
   font-size: 0.9em;
 }
 
-#academic:active {
+.academic-active {
   color: #164EFF;
   font-weight: bold;
   background-color: #F3FF99;
-  border-color: #F3FF99;
+  border: 1px solid #F3FF99;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 0.9em;
 }
 
-#networking:active {
+.networking-active {
   color: #164EFF;
   font-weight: bold;
   background-color: #BEFF99;
-  border-color: #BEFF99;
+  border: 1px solid #BEFF99;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 0.9em;
 }
 
 /* Event Card Stylings */

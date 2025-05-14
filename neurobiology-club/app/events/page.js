@@ -1,11 +1,38 @@
+"use client"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { client } from "@/sanity/lib/client";
 import EventCard from "./components/EventCard";
+import { useState, useEffect } from "react";
 
-export default async function Events() {
-    const upcoming = await getUpcomingEvents();
-    const past = await getPastEvents();
+export default function Events() {
+    const [upcoming, setUpcoming] = useState([]);
+    const [past, setPast] = useState([]);
+    const [filterUpcoming, setFilterUpcoming] = useState(null);
+    const [filterPast, setFilterPast] = useState(null);
+
+    useEffect(() => {
+        async function fetchEvents() {
+            const upcomingEvents = await getUpcomingEvents();
+            const pastEvents = await getPastEvents();
+            setUpcoming(upcomingEvents);
+            setPast(pastEvents);
+        }
+
+        fetchEvents();
+    }, []);
+
+    const filteredUpcoming = filterUpcoming ? upcoming.filter((event) => event.type === filterUpcoming) : upcoming;
+
+    const filteredPast = filterPast ? past.filter((event) => event.type === filterPast) : past;
+
+    const toggleFilterUpcoming = (type, currentFilter, setFilter) => {
+        setFilter(currentFilter === type ? null : type);
+    };
+
+    const toggleFilterPast = (type, currentFilter, setFilter) => {
+        setFilter(currentFilter === type ? null : type);
+    };
 
     return (
         <div className="">
@@ -22,27 +49,43 @@ export default async function Events() {
                     </div>
                 </div>
             </div>
+
             <div>
-               <p id="event-header" className="font-extrabold ml-32 mt-16 border-b border-black">UPCOMING EVENTS</p>
+               <p id="event-header" className="font-extrabold mx-28 mt-16 border-b border-black">UPCOMING EVENTS</p>
                <div className="flex items-center pl-32 pt-4">
-                    <button id="academic">Academic</button>
-                    <button className="ml-4"id="networking">Networking</button>
+                    <button
+                        onClick={() => toggleFilterUpcoming("Academic", filterUpcoming, setFilterUpcoming)}
+                        className={`px-4 py-2 border ${filterUpcoming === "Academic" ? "academic-active" : "academic"}`}>
+                        Academic
+                    </button>
+                    <button
+                        onClick={() => toggleFilterUpcoming("Networking", filterUpcoming, setFilterUpcoming)}
+                        className={`ml-4 px-4 py-2 border ${filterUpcoming === "Networking" ? "networking-active" : "networking"}`}>
+                        Networking
+                    </button>
                </div>
                 <div>
-                    {upcoming.map((event) => (
-                        <EventCard key = {event.name} event = {event}/>
+                    {filteredUpcoming.map((event) => (
+                        <EventCard key={event.name} event={event} />
                     ))}
-                </div> 
+                </div>
             </div>
             
-
-            <p id="event-header" className="font-extrabold ml-32 mt-16 border-b border-black">PAST EVENTS</p>
+            <p id="event-header" className="font-extrabold mx-28 mt-24 border-b border-black">PAST EVENTS</p>
             <div className="flex items-center pl-32 pt-4">
-                <button id="academic">Academic</button>
-                <button className="ml-4"id="networking">Networking</button>
+                <button
+                    onClick={() => toggleFilterPast("Academic", filterPast, setFilterPast)}
+                    className={`px-4 py-2 border ${filterPast === "Academic" ? "academic-active" : "academic"}`}>
+                    Academic
+                </button>
+                <button
+                    onClick={() => toggleFilterPast("Networking", filterPast, setFilterPast)}
+                    className={`ml-4 px-4 py-2 border ${filterPast === "Networking" ? "networking-active" : "networking"}`}>
+                    Networking
+                </button>
             </div>
             <div>
-                {past.map((event) => (
+                {filteredPast.map((event) => (
                     <EventCard key = {event.name} event = {event}/>
                 ))}
             </div> 

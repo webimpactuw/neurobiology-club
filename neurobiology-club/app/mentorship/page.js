@@ -74,12 +74,12 @@ export default function Mentorship() {
                 <div className="flex items-center justify center pt-8">
                   <div>
                     <p className="pb-4" id="mentorship-description">LOOKING FOR A MENTOR?</p>
-                    <button id="mentorship-button">Click Here!</button>
+                    <a id="mentorship-button">Click Here!</a>
                   </div>
 
                   <div className="ml-24">
                     <p className="pb-4" id="mentorship-description">INTERESTED IN MENTORING?</p>
-                    <button id="mentorship-button">Click Here!</button>
+                    <a id="mentorship-button">Click Here!</a>
                   </div>
                 </div>
               </div>
@@ -136,8 +136,8 @@ export default function Mentorship() {
 
               <div className="flex items-center justify center pt-8">
                 <button id="mentorship-button">Undergraduate</button>
-                <button className="ml-8" id="mentorship-button">Medical Student</button>
-                <button className="ml-8" id="mentorship-button">Resident</button>
+                <a className="ml-8" id="mentorship-button">Medical Student</a>
+                <a className="ml-8" id="mentorship-button">Resident</a>
               </div>
             </div>
           </div>

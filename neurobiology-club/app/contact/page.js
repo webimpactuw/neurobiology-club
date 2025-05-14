@@ -4,10 +4,19 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+export default function ContactPage() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        alert(`Thank you for your message, ${name}!\nWe'll get back to you at ${email}.`);
+        e.target.reset();
+    };
+
     return (
         <div>
             <Header />
-                         <div className="ml-[142px] flex items-center">
+            <div className="ml-[142px] flex items-center">
                 <div className="flex flex-col">
                     <div className="flex">
                         <p id="big-text">G</p>
@@ -26,14 +35,14 @@ import Footer from "../components/Footer";
                         <p id="big-text">H</p>
                         <div className="mt-4"id="hover-wrapper">
                             <Hover src="/email.svg"
-                                hoverSrc="/hover-email.svg"
+                                hoverSrc="/hover-email.svg"                                
                                 alt="email"
                                 width={115}
                                 height={115}
                                 className="transition-color duration-200 ease-in"/>
                             <div id="hover-bubble">nbio-club@u.washington.edu</div>
                         </div>
-                        
+                            
                         <div className="mt-4" id="hover-wrapper">
                             <Hover src="/insta.svg"
                                 hoverSrc="/hover-insta.svg"
@@ -43,7 +52,6 @@ import Footer from "../components/Footer";
                                 className="transition-color duration-200 ease-in"/> 
                             <div id="hover-bubble">@uwneurobiologyclub</div>
                         </div>
-                        
                     </div> 
                 </div>
             </div>
@@ -87,11 +95,10 @@ import Footer from "../components/Footer";
                     </a>
                 </div>
             </main>
-
             <Footer />
         </div>
     );
-}
+};
 
 const inputStyle = {
     width: '100%',
@@ -112,15 +119,6 @@ const buttonStyle = {
     cursor: 'pointer',
     fontSize: '1rem'
 };
-
-export default function ContactPage() {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        alert(`Thank you for your message, ${name}!\nWe'll get back to you at ${email}.`);
-        e.target.reset();
-    };
 
 function Hover({ src, hoverSrc, alt, ...props }) {
   const [isHovered, setIsHovered] = useState(false);
