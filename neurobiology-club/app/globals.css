@@ -10,7 +10,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter);
+  font-family: var(--font-nunito-sans);
 }
 
 @layer utilities {
@@ -34,22 +34,10 @@ nav a:hover {
 
 nav a.active {
   color: #164EFF;
-  border: 1.75px solid #164EFF;
+  border: 2px solid #164EFF;
   font-weight: bold;
   border-radius: 100px;
   padding: 0.55rem 1rem;
-}
-
-/* Neuron Image + Text Stylings */
-#big-text {
-  color: #164EFF;
-  font-size: 5em;
-  letter-spacing: 0.3em;
-  font-weight: bold;
-}
-
-#big-text:hover {
-  color: #F3FF99;
 }
 
 #mentorship {
@@ -58,6 +46,56 @@ nav a.active {
   border-radius: 100px;
   padding: 0.55rem 1rem;
   transition: color 0.5s ease-in-out;
+}
+
+/* Neuron Image + Text Stylings */
+#big-text {
+  color: #164EFF;
+  font-size: 6em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  transition: color ease 0.2s
+}
+
+#big-text:hover {
+  color: #F3FF99;
+}
+
+/* Home Page Stylings */
+#blue-box {
+  background-color: #164EFF;
+  color: #F3FF99;
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#club-description {
+  color: #164EFF;
+  text-align: left;
+  font-weight: bold;
+  font-size: 2em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 142px;
+  padding-left: 142px;
+}
+
+#small-description {
+  color: #164EFF;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#blue-header {
+  color: #164EFF;
+  text-align: left;
+  font-size: 1.75em;
+  padding-top: 32px;
+  padding-left: 142px;
 }
 
 /* People Page Stylings */
@@ -85,11 +123,10 @@ nav a.active {
   font-weight: bold;
 }
 
-#board-members {
+#yellow-box {
   background-color: #F3FF99;
   color: #164EFF;
   text-align: center;
-  font-weight: bold;
   font-size: 1.5em;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -98,3 +135,137 @@ nav a.active {
 }
 
 /* Events Page Stylings */
+#event-header {
+  color: #164EFF;
+  text-align: left;
+  font-size: 1.75em;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+#academic, #networking {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+}
+
+#academic:active {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #F3FF99;
+  border-color: #F3FF99;
+}
+
+#networking:active {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #BEFF99;
+  border-color: #BEFF99;
+}
+
+/* Event Card Stylings */
+#academic-box {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #F3FF99;
+  padding: 4px 10px;
+  font-size: 0.8em;
+}
+
+#networking-box {
+  color: #164EFF;
+  font-weight: bold;
+  background-color: #BEFF99;
+  padding: 4px 10px;
+  font-size: 0.8em;
+}
+
+#rsvp {
+  background-color: white;
+  color: #164EFF;
+  border: 1px solid #164EFF;
+  border-radius: 100px;
+  padding: 6px 48px;
+  font-size: 0.9em;
+}
+
+#rsvp:hover {
+  color: white;
+  background-color: #164EFF;
+}
+
+/* Mentorship Page Stylings */
+#description-headers {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 32px;
+  padding-top: 32px;
+}
+
+#mentorship-description {
+  color: #164EFF;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Membership Component Stylings */
+#join-header {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+
+#mentorship-container {
+  max-width: 800px;
+  padding: 30px 40px;
+  border-radius: 24px;
+  border: 1px solid #000000;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#mentorship-button {
+  border: 1.8px solid #164EFF;
+  background-color: white;
+  border-radius: 100px;
+  color: #164EFF;
+  padding: 6px 36px;
+}
+
+#mentorship-button:hover {
+  color: #F3FF99;
+  background-color: #164EFF;
+}
+
+/* Contact Page Stylings */
+#hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#hover-bubble {
+  position: absolute;
+  top: 55%;
+  left: 75px;
+  z-index: 10;
+  transform: translateY(-10%);
+  background-color: white;
+  border: 1px solid #164EFF;
+  color: #164EFF;
+  border-radius: 100px;
+  padding: 4px 20px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity ease 0.2s;
+}
+
+#hover-wrapper:hover #hover-bubble {
+  opacity: 1;
+}

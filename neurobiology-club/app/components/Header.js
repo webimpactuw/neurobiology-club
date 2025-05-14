@@ -48,7 +48,7 @@ export default function Header() {
 
   function scrollToTop(event) {
     if (window.location.pathname === event.currentTarget.getAttribute('href')) {
-      event.preventDefault(); // Prevent default link behavior
+      event.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }

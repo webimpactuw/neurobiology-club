@@ -38,7 +38,7 @@ export default async function Team() {
             </div>
 
             <div className = "pb-14 flex items-center justify-center">
-               <button id="board-members">BOARD MEMBERS</button> 
+               <button className="font-extrabold "id="yellow-box">BOARD MEMBERS</button> 
             </div>
             
             <div className="min-h-screen grid place-items-center pt-5">
@@ -55,11 +55,11 @@ export default async function Team() {
 
 async function getPeople() {
     const query = `*[_type == "people"] | order(order asc) {
-    image, 
-    name,
-    role,
-    order,
-  }`;
+        image, 
+        name,
+        role,
+        order,
+    }`;
 
   const person = await client.fetch(query);
   return person;
