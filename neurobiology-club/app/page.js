@@ -1,9 +1,15 @@
+"use client"
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ImageCarousel from "./components/ImageCarousel";
+import SmallEvent from "./components/SmallEvent";
+import { client } from "@/sanity/lib/client";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+    const events = await getEvents();
+
     return (
         <div>
             <Header />
@@ -83,20 +89,40 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-start pb-12">
                 <div>
-                    <div className="flex items-center">
-                        <p className="font-extrabold" id="blue-header">UPCOMING EVENTS</p>  
-                        <Link href="/events" className="ml-32 mt-6">Go to the Events Page</Link>
+                    <div className="flex items-center mx-28 border-b border-black pb-6">
+                        <p className="font-extrabold" id="blue-header-home">UPCOMING EVENTS</p>  
+                        <Link href="/events" className="ml-48 mt-6">Go to the Events Page</Link>
                     </div>
                     
-                    {/* events */}
+                    <div>
+                        {events.map((event) => (
+                            <SmallEvent key={event.name} event={event} />
+                        ))}
+                    </div>
                 </div>
-                <div>
-                    {/* photo slideshows */}
+                <div className="mt-12">
+                   <ImageCarousel /> 
                 </div>
+                
             </div>
             <Footer/>
         </div> 
     );
+}
+
+async function getEvents() {
+    const query = `*[_type == "events" && date >= now()] | order(date asc) [0...4] {
+        date,
+        month,
+        name,
+        location,
+        time,
+        type,
+        link,
+    }`;
+
+    const event = await client.fetch(query);
+    return event;
 }
