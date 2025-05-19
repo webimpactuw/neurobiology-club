@@ -38,7 +38,7 @@ export default {
     },
     {
       name: "type",
-      title: "Type",
+      title: "Type (Networking or Academic)",
       type: "string",
       validation: (Rule) => Rule.required(),
     },

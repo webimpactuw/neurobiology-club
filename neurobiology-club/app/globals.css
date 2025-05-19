@@ -98,6 +98,27 @@ nav a.active {
   padding-left: 142px;
 }
 
+#blue-header-home {
+  color: #164EFF;
+  text-align: left;
+  font-size: 1.75em;
+  padding-top: 32px;
+}
+
+#rsvp-home {
+  background-color: white;
+  color: #164EFF;
+  border: 1px solid #164EFF;
+  border-radius: 100px;
+  padding: 6px 66px;
+  font-size: 0.9em;
+}
+
+#rsvp-home:hover {
+  color: white;
+  background-color: #164EFF;
+}
+
 /* People Page Stylings */
 #circle {
   width: 220px;

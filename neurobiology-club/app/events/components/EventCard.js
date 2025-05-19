@@ -7,13 +7,14 @@ import { useState } from "react";
 export default function EventCard({ event }) {
   const [isOpen, setIsOpen] = useState(false);
   const localDate = new Date(`${event.date}T12:00:00`);
+  
   return (
     <div className="pt-8 pb-8 mx-28 border-b border-black">
       {/* Event Card Header */}
       <div className="flex items-left justify-left cursor-pointer mx-4" 
           onClick={() => setIsOpen(!isOpen)}>
-        <div className="font-bold">
-          <p className="text-xl">{format(localDate, "d")}</p>
+        <div className="font-bold items-col">
+          <p className="text-xl text-center">{format(localDate, "d")}</p>
           <p className="text-xs">{event.month}</p>
         </div>
         <div className="ml-6">

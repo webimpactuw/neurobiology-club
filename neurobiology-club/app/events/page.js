@@ -94,7 +94,6 @@ export default function Events() {
     )
 };
 
-// make two queries, one for upcoming and one for past
 async function getUpcomingEvents() {
     const query = `*[_type == "events" && date >= now()] | order(date asc) {
         date,
@@ -122,7 +121,6 @@ async function getPastEvents() {
         type,
         image,
         description,
-        link,
     }`;
 
     const event = await client.fetch(query);
