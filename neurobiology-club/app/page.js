@@ -1,4 +1,3 @@
-"use client"
 import Image from "next/image";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -38,7 +37,7 @@ export default async function Home() {
                         <p id="big-text">B</p>
                     </div> 
                 </div>
-                <Image src = "/Neuron-home.png"
+                <Image src = "/neuron-home.svg"
                     alt = "Neuron"
                     width = {550}
                     height = {550}
@@ -93,7 +92,15 @@ export default async function Home() {
                 <div>
                     <div className="flex items-center mx-28 border-b border-black pb-6">
                         <p className="font-extrabold" id="blue-header-home">UPCOMING EVENTS</p>  
-                        <Link href="/events" className="ml-48 mt-6">Go to the Events Page</Link>
+                        <Link href="/events" className="flex ml-48 mt-6">
+                            <Image
+                                src="/polygon.svg"
+                                alt="polygon"
+                                width={12}
+                                height={12}/>
+                            <p className="pl-2">Go to the Events Page</p>
+                        </Link>
+                        
                     </div>
                     
                     <div>

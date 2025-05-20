@@ -6,16 +6,17 @@ export default function SmallEvent({ event }) {
   
   return (
     <div className="pt-8 pb-8 mx-28 border-b border-black">
-      <div className="flex items-left justify-left cursor-pointer mx-4">
+      <div className="flex items-left justify-left cursor-pointer">
+        <div className="h-12 border-l border-black mr-4"/>
         <div className="font-bold">
           <p className="text-xl">{format(localDate, "d")}</p>
           <p className="text-xs">{event.month}</p>
         </div>
-        <div className="ml-6 mr-12">
+        <div className="ml-6 mr-16">
           <div className="flex items-center">
             <p className="font-semibold">{event.name}</p>
             <button id={event.type === "Academic" ? "academic-box" : event.type === "Networking" ? "networking-box" : ""}
-              className="ml-4">
+              className="ml-6">
               {event.type}
             </button>
           </div>

@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -14,8 +15,8 @@ export default function ImageCarousel() {
       setTimeout(() => {
         setIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFadeIn(true);
-      }, 300);
-    }, 3000);
+      }, 2000);
+    }, 10000);
 
     return () => clearInterval(cycle);
   }, []);
@@ -36,7 +37,7 @@ export default function ImageCarousel() {
         fill
         style={{
           objectFit: "cover",
-          transition: "opacity 0.3s ease-in-out",
+          transition: fadeIn ? "opacity 1s ease-in" : "opacity 2s ease-out",
           opacity: fadeIn ? 1 : 0,
         }}
       />
