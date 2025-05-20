@@ -16,7 +16,7 @@ export default function ContactPage() {
     return (
         <div>
             <Header />
-            <div className="ml-[142px] flex items-center">
+            <div className="ml-[200px] flex items-center">
                 <div className="flex flex-col">
                     <div className="flex">
                         <p id="big-text">G</p>
@@ -33,7 +33,30 @@ export default function ContactPage() {
                         <p id="big-text">U</p>
                         <p id="big-text">C</p>
                         <p id="big-text">H</p>
-                        <div className="mt-4"id="hover-wrapper">
+                        <div className="flex">
+                            <Hover
+                                src="/ellipse.svg"
+                                hoverSrc="/hover-ellipse.svg" 
+                                alt="ellipse1"
+                                width={20}
+                                height={20}
+                                className="ml-14 mr-6"/>
+                            <Hover
+                                src="/ellipse.svg"
+                                hoverSrc="/hover-ellipse.svg" 
+                                alt="ellipse2"
+                                width={20}
+                                height={20}
+                                className="mr-6"/>
+                            <Hover
+                                src="/ellipse.svg"
+                                hoverSrc="/hover-ellipse.svg" 
+                                alt="ellipse3"
+                                width={20}
+                                height={20}
+                                className="mr-14"/>
+                        </div>
+                        <div className="mt-4 mr-6" id="hover-wrapper">
                             <Hover src="/email.svg"
                                 hoverSrc="/hover-email.svg"                                
                                 alt="email"

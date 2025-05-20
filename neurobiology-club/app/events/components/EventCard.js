@@ -7,13 +7,14 @@ import { useState } from "react";
 export default function EventCard({ event }) {
   const [isOpen, setIsOpen] = useState(false);
   const localDate = new Date(`${event.date}T12:00:00`);
+  const isPastEvent = localDate < new Date();
   
   return (
-    <div className="pt-8 pb-8 mx-28 border-b border-black">
-      {/* Event Card Header */}
-      <div className="flex items-left justify-left cursor-pointer mx-4" 
+    <div className="pt-6 pb-6 mx-28 border-b border-black">
+      <div className="flex items-left justify-left cursor-pointer" 
           onClick={() => setIsOpen(!isOpen)}>
-        <div className="font-bold items-col">
+        <div className="h-12 border-l border-black mr-4"/>
+        <div className="font-bold">
           <p className="text-xl text-center">{format(localDate, "d")}</p>
           <p className="text-xs">{event.month}</p>
         </div>
@@ -36,15 +37,18 @@ export default function EventCard({ event }) {
             <Image
               src = {urlFor(event.image).auto("format").url()}
               alt = {event.name}
-              width = {450}
-              height = {450}/>
+              width = {375}
+              height = {375}
+              className="ml-4"/>
           )}
         
           <div className={`${event.image ? "w-1/2 ml-32 items-center text-center" : "ml-12 w-full items-start text-left"} 
             flex flex-col justify-center mt-2`}>
             <div className="mt-2 flex-col items-center text-center">
               <p className="mb-8">{event.description}</p>
-              <a href={event.link} target="_blank" id="rsvp">RSVP</a>
+              {!isPastEvent && (
+                <a href={event.link} target="_blank" id="rsvp">RSVP</a>
+              )}
             </div>
           </div>
         </div>

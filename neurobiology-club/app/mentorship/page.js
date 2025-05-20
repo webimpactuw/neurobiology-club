@@ -20,7 +20,7 @@ export default function Mentorship() {
               <p id="big-text">I</p>
               <p id="big-text">P</p>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center ml-6">
               <p id="big-text">P</p>
               <p id="big-text">R</p>               
               <p id="big-text">O</p>
