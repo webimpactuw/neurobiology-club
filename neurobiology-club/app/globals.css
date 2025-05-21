@@ -224,6 +224,14 @@ nav a.active {
   background-color: #164EFF;
 }
 
+#no-events {
+  color: #164EFF;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 /* Mentorship Page Stylings */
 #description-headers {
   color: #164EFF;
@@ -253,7 +261,8 @@ nav a.active {
   max-width: 800px;
   padding: 30px 40px;
   border-radius: 24px;
-  border: 1px solid #000000;
+  border: 1px solid #164EFF;
+  color: #164EFF;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }

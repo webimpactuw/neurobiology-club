@@ -65,13 +65,13 @@ export default function Mentorship() {
 
             <div className="pt-20 pb-20">
               <div className="bg-[#F4F3F2]"id="mentorship-container">
-                <p id= "join-header">JOIN OUR MENTORSHIP!</p>
+                {/* <p id= "join-header">JOIN OUR MENTORSHIP!</p>
                 <div id="mentorship-button-text">
                   <p>A mentorship social even is typically held <b>once per quarter</b>, providing a chance for all</p>
                   <p>participants to connect and engage with the broader mentorship community.</p>
-                </div>
+                </div> */}
 
-                <div className="flex items-center justify center pt-8">
+                {/* <div className="flex items-center justify center pt-8">
                   <div>
                     <p className="pb-4" id="mentorship-description">LOOKING FOR A MENTOR?</p>
                     <a id="mentorship-button">Click Here!</a>
@@ -81,6 +81,11 @@ export default function Mentorship() {
                     <p className="pb-4" id="mentorship-description">INTERESTED IN MENTORING?</p>
                     <a id="mentorship-button">Click Here!</a>
                   </div>
+                </div> */}
+                <div>
+                  <p>Thank you for your interest!</p>
+                  <p>Mentor and mentee sign-ups are currently closed.</p>
+                  <p>Please check back later for future matching opportunities.</p>
                 </div>
               </div>
             </div>
@@ -139,6 +144,12 @@ export default function Mentorship() {
                 <a className="ml-8" id="mentorship-button">Medical Student</a>
                 <a className="ml-8" id="mentorship-button">Resident</a>
               </div>
+
+              {/* <div>
+                <p>Thank you for your interest!</p>
+                <p>Mentor and mentee sign-ups are currently closed.</p>
+                <p>Please check back later for future matching opportunities.</p>
+              </div> */}
             </div>
           </div>
         </div>

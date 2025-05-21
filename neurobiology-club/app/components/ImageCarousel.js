@@ -15,7 +15,7 @@ export default function ImageCarousel() {
       setTimeout(() => {
         setIndex((prevIndex) => (prevIndex + 1) % images.length);
         setFadeIn(true);
-      }, 2000);
+      }, 3000);
     }, 10000);
 
     return () => clearInterval(cycle);
@@ -37,7 +37,7 @@ export default function ImageCarousel() {
         fill
         style={{
           objectFit: "cover",
-          transition: fadeIn ? "opacity 1s ease-in" : "opacity 2s ease-out",
+          transition: fadeIn ? "opacity 1s ease-in" : "opacity 3s ease-out",
           opacity: fadeIn ? 1 : 0,
         }}
       />

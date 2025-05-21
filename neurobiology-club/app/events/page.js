@@ -71,9 +71,11 @@ export default function Events() {
                     </button>
                </div>
                 <div>
-                    {filteredUpcoming.map((event) => (
+                {filteredUpcoming.length === 0 ? (<p id="no-events">There are currently no upcoming events!</p>) : 
+                    (filteredUpcoming.map((event) => (
                         <EventCard key={event.name} event={event} />
-                    ))}
+                        ))
+                    )}
                 </div>
             </div>
             
@@ -97,7 +99,7 @@ export default function Events() {
             </div>
 
             {/* Pagination */}
-            <div className="flex justify-center items-center gap-6 mt-6">
+            {/* <div className="flex justify-center items-center gap-6 mt-6">
                 <button
                     onClick={() => setPastPage((prev) => Math.max(prev - 1, 0))}
                     disabled={pastPage === 0}
@@ -127,7 +129,7 @@ export default function Events() {
                 >
                     Next
                 </button>
-            </div>
+            </div> */}
             <Footer/>
         </div> 
     )
