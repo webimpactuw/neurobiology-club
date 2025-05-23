@@ -104,9 +104,14 @@ export default async function Home() {
                     </div>
                     
                     <div>
-                        {events.map((event) => (
-                            <SmallEvent key={event.name} event={event} />
-                        ))}
+                        {events.length === 0 ? (
+                            <div id="no-events">
+                                <p>There are currently no upcoming events!</p><p>Check back soon!</p>
+                            </div>) :
+                            (events.map((event) => (
+                                <SmallEvent key={event.name} event={event} />
+                            ))
+                        )}
                     </div>
                 </div>
                 <div className="mt-12">

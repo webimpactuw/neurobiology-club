@@ -119,6 +119,24 @@ nav a.active {
   background-color: #164EFF;
 }
 
+/* Pagination Stylings */
+#arrow-button:disabled {
+  opacity: 50%;
+}
+
+.numbers {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.2em;
+}
+
+.current-number {
+  background-color: #164EFF;
+  border-radius: 100px;
+  color: white;
+  padding: 6px 14px;
+}
+
 /* People Page Stylings */
 #circle {
   width: 220px;
