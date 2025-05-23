@@ -1,8 +1,9 @@
 "use client"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { client } from "@/sanity/lib/client";
+import Pagination from "../components/Pagination";
 import EventCard from "./components/EventCard";
+import { client } from "@/sanity/lib/client";
 import { useState, useEffect } from "react";
 
 export default function Events() {
@@ -10,14 +11,18 @@ export default function Events() {
     const [filterUpcoming, setFilterUpcoming] = useState(null);
 
     const [past, setPast] = useState([]);
-    const [pastPage, setPastPage] = useState([0]);
     const [filterPast, setFilterPast] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
     const eventsPerPage = 4;
+
     const filteredPast = filterPast ? past.filter((event) => event.type === filterPast) : past;
   
-    const paginatedPast = filteredPast.slice(pastPage * eventsPerPage, (pastPage + 1) * eventsPerPage);
-
     const totalPages = Math.ceil(filteredPast.length / eventsPerPage);
+
+    const paginatedPast = filteredPast.slice(
+        (currentPage - 1) * eventsPerPage,
+        currentPage * eventsPerPage
+    );
 
     useEffect(() => {
         async function fetchEvents() {
@@ -38,6 +43,7 @@ export default function Events() {
 
     const toggleFilterPast = (type, currentFilter, setFilter) => {
         setFilter(currentFilter === type ? null : type);
+        setCurrentPage(1);
     };
 
     return (
@@ -71,8 +77,11 @@ export default function Events() {
                     </button>
                </div>
                 <div>
-                {filteredUpcoming.length === 0 ? (<p id="no-events">There are currently no upcoming events!</p>) : 
-                    (filteredUpcoming.map((event) => (
+                    {filteredUpcoming.length === 0 ? (
+                        <div id="no-events">
+                            <p>There are currently no upcoming events!</p><p>Check back soon!</p>
+                        </div>) : 
+                        (filteredUpcoming.map((event) => (
                         <EventCard key={event.name} event={event} />
                         ))
                     )}
@@ -97,39 +106,13 @@ export default function Events() {
                     <EventCard key = {event.name} event = {event}/>
                 ))}
             </div>
-
-            {/* Pagination */}
-            {/* <div className="flex justify-center items-center gap-6 mt-6">
-                <button
-                    onClick={() => setPastPage((prev) => Math.max(prev - 1, 0))}
-                    disabled={pastPage === 0}
-                    className={`px-4 py-2 border ${
-                    pastPage === 0 ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
-                >
-                    Previous
-                </button>
-
-                <span className="text-sm font-medium text-gray-700">
-                    Page {pastPage + 1} of {totalPages}
-                </span>
-
-                <button
-                    onClick={() =>
-                    setPastPage((prev) =>
-                        (prev + 1) * eventsPerPage < filteredPast.length ? prev + 1 : prev
-                    )
-                    }
-                    disabled={(pastPage + 1) * eventsPerPage >= filteredPast.length}
-                    className={`px-4 py-2 border ${
-                    (pastPage + 1) * eventsPerPage >= filteredPast.length
-                        ? "opacity-50 cursor-not-allowed"
-                        : ""
-                    }`}
-                >
-                    Next
-                </button>
-            </div> */}
+            <div className="flex justify-center mt-12">
+               <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}/> 
+            </div>
+            
             <Footer/>
         </div> 
     )
