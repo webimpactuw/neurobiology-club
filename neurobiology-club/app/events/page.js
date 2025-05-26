@@ -19,10 +19,7 @@ export default function Events() {
   
     const totalPages = Math.ceil(filteredPast.length / eventsPerPage);
 
-    const paginatedPast = filteredPast.slice(
-        (currentPage - 1) * eventsPerPage,
-        currentPage * eventsPerPage
-    );
+    const paginatedPast = filteredPast.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
 
     useEffect(() => {
         async function fetchEvents() {
