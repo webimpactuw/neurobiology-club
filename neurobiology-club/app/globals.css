@@ -323,3 +323,51 @@ nav a.active {
 #hover-wrapper:hover #hover-bubble {
   opacity: 1;
 }
+
+#blue-header-contact {
+  color: #164EFF;
+  text-align: center;
+  font-size: 1.75em;
+}
+
+#form-header {
+  color: #164EFF;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+#submit {
+  border: 1px solid #164EFF;
+  background-color: white;
+  border-radius: 100px;
+  color: #164EFF;
+  padding: 4px 42px;
+}
+
+#submit:hover {
+  color: #F3FF99;
+  background-color: #164EFF;
+}
+
+#contact-header {
+  color: #164EFF;
+  text-align: left;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+#subscribe {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  padding: 8px 20px;
+  font-size: 0.8rem;
+}
+
+#subscribe:hover {
+  color: #F3FF99;
+  background-color: #164EFF;
+}
