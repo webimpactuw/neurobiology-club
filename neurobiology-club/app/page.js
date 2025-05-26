@@ -62,7 +62,7 @@ export default async function Home() {
                     <br></br>
                     <p> OUR PAST EVENTS INCLUDE NEUROSCIENCE MAJOR Q&A SESSIONS,</p>
                     <p>RESEARCH INVOLVEMENT WORKSHOPS, AND PRE-HEALTH OR CAREER</p> 
-                    <p>PANELS. WE'RE ALWAYS OPEN TO NEW IDEAS FROM OUR MEMBERS AND</p> 
+                    <p>PANELS. WE&apos;RE ALWAYS OPEN TO NEW IDEAS FROM OUR MEMBERS AND</p> 
                     <p>LOVE HEARING YOUR SUGGESTIONS!</p> 
                 </div>
 
