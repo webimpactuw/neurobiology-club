@@ -11,7 +11,7 @@ export default async function Team() {
         <div>
             <Header />
             <div className="flex items-center justify-center">
-                <Image src = "/Neuron-Team.png"
+                <Image src = "/neuron-team.svg"
                     alt = "Neuron"
                     width = {550}
                     height = {550}

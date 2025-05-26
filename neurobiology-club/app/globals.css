@@ -98,6 +98,45 @@ nav a.active {
   padding-left: 142px;
 }
 
+#blue-header-home {
+  color: #164EFF;
+  text-align: left;
+  font-size: 1.75em;
+  padding-top: 32px;
+}
+
+#rsvp-home {
+  background-color: white;
+  color: #164EFF;
+  border: 1px solid #164EFF;
+  border-radius: 100px;
+  padding: 6px 66px;
+  font-size: 0.9em;
+}
+
+#rsvp-home:hover {
+  color: white;
+  background-color: #164EFF;
+}
+
+/* Pagination Stylings */
+#arrow-button:disabled {
+  opacity: 50%;
+}
+
+.numbers {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.2em;
+}
+
+.current-number {
+  background-color: #164EFF;
+  border-radius: 100px;
+  color: white;
+  padding: 6px 14px;
+}
+
 /* People Page Stylings */
 #circle {
   width: 220px;
@@ -144,7 +183,7 @@ nav a.active {
   padding-left: 20px;
 }
 
-#academic, #networking {
+.academic, .networking {
   background-color: white;
   border: 1px solid black;
   border-radius: 100px;
@@ -152,18 +191,24 @@ nav a.active {
   font-size: 0.9em;
 }
 
-#academic:active {
+.academic-active {
   color: #164EFF;
   font-weight: bold;
   background-color: #F3FF99;
-  border-color: #F3FF99;
+  border: 1px solid #F3FF99;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 0.9em;
 }
 
-#networking:active {
+.networking-active {
   color: #164EFF;
   font-weight: bold;
   background-color: #BEFF99;
-  border-color: #BEFF99;
+  border: 1px solid #BEFF99;
+  border-radius: 100px;
+  padding: 8px 12px;
+  font-size: 0.9em;
 }
 
 /* Event Card Stylings */
@@ -197,6 +242,14 @@ nav a.active {
   background-color: #164EFF;
 }
 
+#no-events {
+  color: #164EFF;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 /* Mentorship Page Stylings */
 #description-headers {
   color: #164EFF;
@@ -226,7 +279,8 @@ nav a.active {
   max-width: 800px;
   padding: 30px 40px;
   border-radius: 24px;
-  border: 1px solid #000000;
+  border: 1px solid #164EFF;
+  color: #164EFF;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -254,7 +308,7 @@ nav a.active {
   position: absolute;
   top: 55%;
   left: 75px;
-  z-index: 10;
+  z-index: 5;
   transform: translateY(-10%);
   background-color: white;
   border: 1px solid #164EFF;

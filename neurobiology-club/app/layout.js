@@ -18,7 +18,7 @@ const nunito = Nunito_Sans ({
 
 export const metadata = {
   title: "UW Neurobiology",
-  description: "Website created by Aliyah Mcrae, Hao Le, Gabe Tanumihardja, and Ava Nunes",
+  description: "Website created by Aliyah Mcrae, Gabe Tanumihardja, and Ava Nunes",
   icons: {icon: '/logo.svg'}
 };
 

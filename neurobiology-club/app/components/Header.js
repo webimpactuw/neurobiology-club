@@ -8,7 +8,7 @@ export default function Header() {
 
   if (pathname != "/studio") {
     return (
-        <nav className="pt-3 sticky top-0 pb-4 bg-gradient-to-b from-[#F4F3F2] to-[#F4F3F2]/0">
+        <nav className="pt-3 sticky top-0 pb-4 bg-gradient-to-b from-[#F4F3F2] to-[#F4F3F2]/0 z-10">
           <div className="h-14 max-w-7xl p-4 mx-auto flex items-center justify-between">
             <Link href="/">
               <Image src = "/logo.svg"
