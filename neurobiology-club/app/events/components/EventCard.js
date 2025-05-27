@@ -10,7 +10,7 @@ export default function EventCard({ event }) {
   const isPastEvent = localDate < new Date();
   
   return (
-    <div className="pt-6 pb-6 mx-28 border-b border-black">
+    <div className="pt-6 pb-4 mx-28 border-b border-black">
       <div className="flex items-left justify-left cursor-pointer" 
           onClick={() => setIsOpen(!isOpen)}>
         <div className="h-12 border-l border-black mr-4"/>
@@ -27,6 +27,14 @@ export default function EventCard({ event }) {
             </button>
           </div>
           <p className="text-xs">{event.location} | {event.time}</p>
+        </div>
+        <div className="ml-auto">
+          <Image
+            src={isOpen ? "/drop-up.svg" : "/drop-down.svg"}
+            alt="Toggle Arrow"
+            width={50}
+            height={45}
+            className="ml-2 pt-2 transition-transform duration-300"/>
         </div>
       </div>
 

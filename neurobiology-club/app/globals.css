@@ -370,4 +370,5 @@ nav a.active {
 #subscribe:hover {
   color: #F3FF99;
   background-color: #164EFF;
+  border:1px solid#164EFF
 }
