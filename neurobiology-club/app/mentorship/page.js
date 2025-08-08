@@ -36,31 +36,20 @@ export default function Mentorship() {
           <button className="mt-20 font-extrabold" id="blue-box">UNDERGRADUATE MENTORSHIP PROGRAM</button>
         </div>
         <div className="bg-gradient-to-t from-[#F3FF99] to-[#F4F3F2] ">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center max-w-3xl mx-auto px-4 md:px-8">
             <p id="description-headers">FOR WHOM</p>
             <div id="mentorship-description">
-              <p>This program is intended for <b>Undergraduate Students</b> who are interested in</p>
-              <p>being matched with a current student studying Neuroscience, Biology, or another</p>
-              <p>STEM-related fields. It offers an opportunity for students seeking guidance and</p>
-              <p>support as they navigate their academic journey within the sciences.</p>
+              <p>This program is intended for <b>Undergraduate Students</b> who are interested in being matched with a current student studying Neuroscience, Biology, or another STEM-related fields. It offers an opportunity for students seeking guidance and support as they navigate their academic journey within the sciences.</p>
             </div>
 
             <p id="description-headers">WHAT TO EXPECT</p> 
             <div id="mentorship-description">
-              <p>Through this mentorship, students can receive personalized advice on a variety of </p>
-              <p>topics, including applying to specific majors, managing a busy schedule, studying</p>
-              <p>for introductory courses like the biology series, and finding volunteer/research</p>
-              <p>opportunities! Mentors provide insights drawn from their own experiences,</p>
-              <p>helping mentees feel more prepared and confident as they pursue their academic</p>
-              <p>and extracurricular goals.</p>
+              <p>Through this mentorship, students can receive personalized advice on a variety of topics, including applying to specific majors, managing a busy schedule, studying for introductory courses like the biology series, and finding volunteer/research opportunities! Mentors provide insights drawn from their own experiences, helping mentees feel more prepared and confident as they pursue their academic and extracurricular goals.</p>
              </div>
                     
             <p id="description-headers"> MEETING SCHEDULE</p>
             <div id="mentorship-description">
-              <p>The program is quite flexible, allowing mentors and mentees to arrange meetings</p>
-              <p>according to their own availability. While there is no fixed meeting structure,</p>
-              <p>participants are expected to maintain open and clear communication throughout</p>
-              <p>the quarter.</p> 
+              <p>The program is quite flexible, allowing mentors and mentees to arrange meetings according to their own availability. While there is no fixed meeting structure, participants are expected to maintain open and clear communication throughout the quarter.</p> 
              </div>
 
             <div className="pt-20 pb-20">
@@ -95,39 +84,22 @@ export default function Mentorship() {
         <div className="flex items-center justify-center">
           <button className="mt-20 font-extrabold" id="yellow-box">GRADUATE MENTORSHIP PROGRAM</button>
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center max-w-3xl mx-auto px-4 md:px-8">
           <p id="description-headers">FOR WHOM</p>
           <div id="mentorship-description">
-            <p>This mentorship program is designed for undergraduate students, medical students,</p>
-            <p>and residents who are interested in fostering connections across different stages of</p>
-            <p>the medical field.</p>
+            <p>This mentorship program is designed for undergraduate students, medical students, and residents who are interested in fostering connections across different stages of the medical field.</p>
             <br></br>
-            <p>Undergraduate students considering a future in medicine can benefit from those</p>
-            <p>already on the path. Medical students play a dual role-they not only mentor</p>
-            <p>undergraduates but can also be mentees to residents, allowing them to both share</p>
-            <p>their knowledge and gain insights from those further along in their journey. Residents</p>
-            <p>serve as mentors to medical students and undergraduates, offering specialized</p>
-            <p>advice and sharing experiences from their residency and clinical practice.</p>
+            <p>Undergraduate students considering a future in medicine can benefit from those already on the path. Medical students play a dual role-they not only mentor undergraduates but can also be mentees to residents, allowing them to both share their knowledge and gain insights from those further along in their journey. Residents serve as mentors to medical students and undergraduates, offering specialized advice and sharing experiences from their residency and clinical practice.</p>
           </div>
                 
           <p id="description-headers">WHAT TO EXPECT</p>
           <div id="mentorship-description">
-            <p>Participants in the program can expect personalized mentorship focused on medical</p>
-            <p>school and residency preparation. This includes practical tips for studying for the</p>
-            <p>MCAT, navigating application processes, and learning from the personal stories of</p>
-            <p>mentors who have progressed through various stages of the medical profession. The</p>
-            <p>program also fosters opportunities for networking, creating connections between</p>
-            <p>undergraduates, medical students, and residents to encourage collaboration and</p>
-            <p>knowledge sharing across the different phases of their medical careers.</p>
+            <p>Participants in the program can expect personalized mentorship focused on medical school and residency preparation. This includes practical tips for studying for the MCAT, navigating application processes, and learning from the personal stories of mentors who have progressed through various stages of the medical profession. The program also fosters opportunities for networking, creating connections between undergraduates, medical students, and residents to encourage collaboration and knowledge sharing across the different phases of their medical careers.</p>
           </div>
                 
           <p id="description-headers">MEETING SCHEDULE</p>
           <div id="mentorship-description">
-            <p>Recognizing the demanding schedules of mentors, the program encourages mentees</p>
-            <p>to take an active role in initiating and maintaining communication with their mentors.</p>
-            <p>Meetings are arranged flexibly throughout the quarter, based on mutual availability,</p>
-            <p>allowing for a tailored approach that fits the individual schedules of both mentors</p>
-            <p>and mentees.</p>
+            <p>Recognizing the demanding schedules of mentors, the program encourages mentees to take an active role in initiating and maintaining communication with their mentors. Meetings are arranged flexibly throughout the quarter, based on mutual availability, allowing for a tailored approach that fits the individual schedules of both mentors and mentees.</p>
           </div>
 
           <div className="pt-20 pb-20">
@@ -139,10 +111,10 @@ export default function Mentorship() {
                 <p>future, medical student or resident, consider applying!</p>
               </div>
 
-              <div className="flex items-center justify center pt-8">
+              <div className="flex flex-col md:flex-row items-center justify-center pt-8">
                 <button id="mentorship-button">Undergraduate</button>
-                <a className="ml-8" id="mentorship-button">Medical Student</a>
-                <a className="ml-8" id="mentorship-button">Resident</a>
+                <a className="mt-4 md:mt-0 md:ml-8" id="mentorship-button">Medical Student</a>
+                <a className="mt-4 md:mt-0 md:ml-8" id="mentorship-button">Resident</a>
               </div>
 
               {/* <div>
