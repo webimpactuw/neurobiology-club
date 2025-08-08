@@ -46,7 +46,7 @@ export default async function Home() {
             </div>
             
             <div className="bg-gradient-to-t from-[#F3FF99] to-[#F4F3F2]">
-                <div className="flex justify-center md:justify-start ml-4 md:ml-[142px] pb-4">
+                <div className="flex justify-center md:justify-start md:ml-[142px] pb-4">
                     <button className="font-extrabold mt-16" id="blue-box"> WHO WE ARE</button>
                 </div>
 
