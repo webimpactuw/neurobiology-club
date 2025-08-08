@@ -35,9 +35,9 @@ export default function Events({ upcomingEvents, pastEvents }) {
     return (
         <div className="">
             <Header />
-            <div className="flex items-left justify-left">
-                <div className="ml-32">
-                    <div className="flex items-center justify-end w-full pt-32">
+            <div className="flex items-center justify-center md:justify-start">
+                <div className="ml-0 md:ml-32">
+                    <div className="flex items-center justify-center md:justify-end w-full pt-0 md:pt-32">
                         <p id="big-text">E</p> 
                         <p id="big-text">V</p>
                         <p id="big-text">E</p>
@@ -49,8 +49,8 @@ export default function Events({ upcomingEvents, pastEvents }) {
             </div>
 
             <div>
-               <p id="event-header" className="font-extrabold mx-28 mt-16 border-b border-black">UPCOMING EVENTS</p>
-               <div className="flex items-center pl-32 pt-4">
+               <p id="event-header" className="font-extrabold mx-4 md:mx-28 mt-16 border-b border-black">UPCOMING EVENTS</p>
+               <div className="flex items-center pl-4 md:pl-32 pt-4">
                     <button
                         onClick={() => toggleFilterUpcoming("Academic", filterUpcoming, setFilterUpcoming)}
                         className={`px-4 py-2 border ${filterUpcoming === "Academic" ? "academic-active" : "academic"}`}>
@@ -74,8 +74,8 @@ export default function Events({ upcomingEvents, pastEvents }) {
                 </div>
             </div>
             
-            <p id="event-header" className="font-extrabold mx-28 mt-24 border-b border-black">PAST EVENTS</p>
-            <div className="flex items-center pl-32 pt-4">
+            <p id="event-header" className="font-extrabold mx-4 md:mx-28 mt-24 border-b border-black">PAST EVENTS</p>
+            <div className="flex items-center pl-4 md:pl-32 pt-4">
                 <button
                     onClick={() => toggleFilterPast("Academic", filterPast, setFilterPast)}
                     className={`px-4 py-2 border ${filterPast === "Academic" ? "academic-active" : "academic"}`}>
