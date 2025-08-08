@@ -12,16 +12,16 @@ export default async function Home() {
     return (
         <div>
             <Header />
-            <div className="ml-[142px] flex items-center">
+            <div className="flex items-center justify-center md:justify-start md:ml-[142px]">
                 <div className="flex flex-col">
-                    <div className="flex">
+                    <div className="flex justify-center md:justify-start">
                         <p id="big-text">N</p>
                         <p id="big-text">E</p>
                         <p id="big-text">U</p>
                         <p id="big-text">R</p>
                         <p id="big-text">O</p>
                     </div>
-                    <div className="flex">
+                    <div className="flex justify-center md:justify-start">
                         <p id="big-text">B</p>
                         <p id="big-text">I</p>
                         <p id="big-text">O</p>
@@ -30,7 +30,7 @@ export default async function Home() {
                         <p id="big-text">G</p>
                         <p id="big-text">Y</p>
                     </div>
-                    <div className="flex">
+                    <div className="flex justify-center md:justify-start">
                         <p id="big-text">C</p>
                         <p id="big-text">L</p>
                         <p id="big-text">U</p>
@@ -41,12 +41,12 @@ export default async function Home() {
                     alt = "Neuron"
                     width = {550}
                     height = {550}
-                    className = ""
+                    className = "hidden md:block"
                 />
             </div>
             
             <div className="bg-gradient-to-t from-[#F3FF99] to-[#F4F3F2]">
-                <div className="justify-left ml-[142px] pb-4">
+                <div className="flex justify-center md:justify-start ml-4 md:ml-[142px] pb-4">
                     <button className="font-extrabold mt-16" id="blue-box"> WHO WE ARE</button>
                 </div>
 
@@ -88,11 +88,11 @@ export default async function Home() {
                 </div>
             </div>
 
-            <div className="flex items-start pb-12">
-                <div>
-                    <div className="flex items-center mx-28 border-b border-black pb-6">
+            <div className="flex flex-col lg:flex-row items-start pb-12">
+                <div className="w-full lg:w-auto">
+                    <div className="flex items-center mx-4 md:mx-28 border-b border-black pb-6">
                         <p className="font-extrabold" id="blue-header-home">UPCOMING EVENTS</p>  
-                        <Link href="/events" className="flex ml-48 mt-6">
+                        <Link href="/events" className="flex ml-4 md:ml-48 mt-6">
                             <Image
                                 src="/polygon.svg"
                                 alt="polygon"
@@ -114,7 +114,7 @@ export default async function Home() {
                         )}
                     </div>
                 </div>
-                <div className="mt-12">
+                <div className="mt-12 w-full lg:w-auto hidden lg:block">
                    <ImageCarousel /> 
                 </div>
                 
@@ -125,6 +125,7 @@ export default async function Home() {
 }
 
 async function getEvents() {
+
     const query = `*[_type == "events" && date >= now()] | order(date asc) [0...4] {
         date,
         month,

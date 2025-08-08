@@ -372,3 +372,126 @@ nav a.active {
   background-color: #164EFF;
   border:1px solid#164EFF
 }
+
+/* Mobile Responsive Text Sizing */
+@media (max-width: 768px) {
+  /* Big text - scale down from 6em to 3em */
+  #big-text {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Blue box - scale down from 1.5em to 1.1em */
+  #blue-box {
+    font-size: 1.1em;
+    padding: 8px 16px;
+  }
+  
+  /* Club description - scale down from 2em to 1.2em and adjust padding */
+  #club-description {
+    font-size: 1.2em;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  
+  /* Blue headers - scale down from 1.75em to 1.3em */
+  #blue-header, #blue-header-home, #blue-header-contact {
+    font-size: 1.3em;
+    padding-left: 20px;
+    text-align: center;
+  }
+  
+  /* Small description - add base font size */
+  #small-description {
+    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Name - scale down from 1.5em to 1.2em */
+  #name {
+    font-size: 1.2em;
+  }
+  
+  /* Yellow box - scale down from 1.5em to 1.1em */
+  #yellow-box {
+    font-size: 1.1em;
+    padding: 8px 16px;
+  }
+  
+  /* Event header - scale down from 1.75em to 1.3em */
+  #event-header {
+    font-size: 1.3em;
+    padding-left: 20px;
+  }
+  
+  /* Description headers - scale down from 1.5em to 1.2em */
+  #description-headers {
+    font-size: 1.2em;
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+  
+  /* Mentorship description - scale down from 1.2em to 1em */
+  #mentorship-description {
+    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Join header - scale down from 1.5em to 1.2em */
+  #join-header {
+    font-size: 1.2em;
+  }
+  
+  /* Contact header - scale down from 1.25em to 1.1em */
+  #contact-header {
+    font-size: 1.1em;
+  }
+  
+  /* Numbers - scale down from 1.2em to 1em */
+  .numbers {
+    font-size: 1em;
+  }
+  
+  /* No events - scale down from 1.2em to 1em */
+  #no-events {
+    font-size: 1em;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Mentorship container - adjust padding for mobile */
+  #mentorship-container {
+    padding: 20px 20px;
+    margin: 0 20px;
+  }
+  
+  /* Circle - scale down for mobile */
+  #circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+  /* Extra small mobile devices */
+  @media (max-width: 480px) {
+    #big-text {
+      font-size: 2.5em;
+      letter-spacing: 0.05em;
+    }
+  
+  #club-description {
+    font-size: 1em;
+  }
+  
+  #blue-header, #blue-header-home, #blue-header-contact {
+    font-size: 1.1em;
+  }
+  
+  #circle {
+    width: 120px;
+    height: 120px;
+  }
+}
