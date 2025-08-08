@@ -61,13 +61,31 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Navigation Dropdown */}
-          <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="bg-white shadow-lg border-t border-gray-200">
-              <ul className="flex flex-col space-y-4 p-6 text-lg font-medium">
+          {/* Mobile Navigation Overlay */}
+          {isMobileMenuOpen && (
+            <div 
+              className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-10"
+              onClick={toggleMobileMenu}
+            ></div>
+          )}
+          
+          {/* Mobile Navigation Sidebar */}
+          <div className={`md:hidden fixed top-0 left-0 h-full w-3/4 bg-[#164EFF] shadow-lg transform transition-transform duration-300 ease-in-out z-20 rounded-r-3xl ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+            <div className="flex justify-end p-4">
+              <button 
+                onClick={toggleMobileMenu}
+                className="text-white hover:text-gray-200"
+                aria-label="Close mobile menu"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <ul className="flex flex-col space-y-4 p-6 text-lg font-semibold text-right text-white">
                 <Link 
                   href={"/"} 
-                  className={`${pathname === "/" ? "active" : ""} py-2 border-b border-gray-100`} 
+                  className="py-2" 
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   HOME
@@ -75,7 +93,7 @@ export default function Header() {
 
                 <Link 
                   href={"/team"} 
-                  className={`${pathname === "/team" ? "active" : ""} py-2 border-b border-gray-100`} 
+                  className="py-2" 
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   MEET OUR TEAM
@@ -83,7 +101,7 @@ export default function Header() {
                       
                 <Link 
                   href={"/events"} 
-                  className={`${pathname === "/events" ? "active" : ""} py-2 border-b border-gray-100`} 
+                  className="py-2" 
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   EVENTS
@@ -91,8 +109,7 @@ export default function Header() {
                       
                 <Link 
                   href={"/mentorship"} 
-                  className={`${pathname === "/mentorship" ? "active" : ""} py-2 border-b border-gray-100`} 
-                  id="mentorship"
+                  className="py-2" 
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   MENTORSHIP
@@ -100,14 +117,13 @@ export default function Header() {
 
                 <Link 
                   href={"/contact"} 
-                  className={`${pathname === "/contact" ? "active" : ""} py-2`} 
+                  className="py-2" 
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   CONTACT
                 </Link> 
               </ul>
             </div>
-          </div>
           
           <div id="gradient"></div>
         </nav>
