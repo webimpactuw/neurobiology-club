@@ -374,9 +374,8 @@ nav a.active {
 
 /* Mobile Responsive Text Sizing */
 @media (max-width: 768px) {
-  /* Big text - scale down from 6em to 3em */
   #big-text {
-    font-size: 3em;
+    font-size: 4em;
     letter-spacing: 0.1em;
   }
   
@@ -395,9 +394,15 @@ nav a.active {
   }
   
   /* Blue headers - scale down from 1.75em to 1.3em */
-  #blue-header, #blue-header-home, #blue-header-contact {
+  #blue-header, #blue-header-home {
     font-size: 1.3em;
     padding-left: 20px;
+    text-align: center;
+  }
+  
+  /* Contact header - larger on mobile */
+  #blue-header-contact {
+    font-size: 1.6em;
     text-align: center;
   }
   
@@ -469,15 +474,15 @@ nav a.active {
   
   /* Circle - scale down for mobile */
   #circle {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
   }
 }
 
   /* Extra small mobile devices */
   @media (max-width: 480px) {
     #big-text {
-      font-size: 2.5em;
+      font-size: 3em;
       letter-spacing: 0.05em;
     }
   
@@ -490,7 +495,7 @@ nav a.active {
   }
   
   #circle {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
   }
 }

@@ -14,26 +14,28 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
         <Header />
-        <div className="ml-[200px] flex items-center mb-10">
+        <div className="flex items-center justify-center md:justify-start md:ml-[200px] mb-4 md:mb-10">
             <div className="flex flex-col">
-                <div className="flex">
+                <div className="flex justify-center md:justify-start">
                     <p id="big-text">G</p>
                     <p id="big-text">E</p>
                     <p id="big-text">T</p>
+                    <p id="big-text" className="md:hidden ml-4">I</p>
+                    <p id="big-text" className="md:hidden">N</p>
                 </div>
-                <div className="flex">
+                <div className="hidden md:flex justify-center md:justify-start">
                     <p id="big-text">I</p>
                     <p id="big-text">N</p>
                 </div>
-                <div className="flex">
+                <div className="flex items-center justify-center md:justify-start md:ml-0 ml-6">
                     <p id="big-text">T</p>
                     <p id="big-text">O</p>
                     <p id="big-text">U</p>
                     <p id="big-text">C</p>
                     <p id="big-text">H</p>
-                    <div className="flex">
+                    <div className="hidden md:flex">
                         <Hover
                             src="/ellipse.svg"
                             hoverSrc="/hover-ellipse.svg" 
@@ -56,44 +58,71 @@ export default function ContactPage() {
                             height={20}
                             className="mr-14"/>
                     </div>
-                    <div className="mt-4 mr-6" id="hover-wrapper">
+                    <div className="mt-4 mr-6 hidden md:block" id="hover-wrapper">
                         <Hover 
                             src="/email.svg"                        
                             hoverSrc="/hover-email.svg"                                
                             alt="email"
                             width={115}
                             height={115}
-                            className="transition-color duration-200 ease-in"/>
+                            className="transition-color duration-200 ease-in md:block hidden"/>
                         <div id="hover-bubble">nbio-club@u.washington.edu</div>
                     </div>
                                 
-                    <div className="mt-4" id="hover-wrapper">
+                    <div className="mt-4 hidden md:block" id="hover-wrapper">
                         <Hover 
                             src="/insta.svg"
                             hoverSrc="/hover-insta.svg"
-                            alt="email"
+                            alt="instagram"
                             width={115}
                             height={115}
-                            className="transition-color duration-200 ease-in"/> 
+                            className="transition-color duration-200 ease-in md:block hidden"/> 
                         <div id="hover-bubble">@uwneurobiologyclub</div>
                     </div>
                 </div> 
             </div>
         </div>
+        
+        {/* Mobile Contact Icons */}
+        <div className="flex justify-center items-start mb-4 md:hidden w-full">
+            <div className="mr-8 flex flex-col items-center">
+                <Hover 
+                    src="/email.svg"                        
+                    hoverSrc="/hover-email.svg"                                
+                    alt="email"
+                    width={100}
+                    height={100}
+                    className="transition-color duration-200 ease-in"/>
+                <p className="text-sm text-[#164EFF] text-center">nbio-club@u.washington.edu</p>
+            </div>
+                        
+            <div className="flex flex-col items-center">
+                <Hover 
+                    src="/insta.svg"
+                    hoverSrc="/hover-insta.svg"
+                    alt="instagram"
+                    width={100}
+                    height={100}
+                    className="transition-color duration-200 ease-in"/> 
+                <p className="text-sm text-[#164EFF] text-center mt-1.5">@uwneurobiologyclub</p>
+            </div>
+        </div>
       
         <main
             style={{
-            padding: '2rem',
+            padding: '1rem',
             background: 'linear-gradient(to bottom, #F4F3F2, #F3FF99)',
             textAlign: 'center',
-            }}>
+            }}
+            className="md:p-8">
             {/* Contact Us Section */}
             <div
             style={{
                 maxWidth: '655px',
                 margin: '2rem auto',
-                padding: '2rem',
+                padding: '1rem',
             }}
+            className="md:p-8"
             >
             <p id="blue-header-contact" className="font-extrabold pb-4">CONTACT US</p>
             <p style={{ color: '#164EFF', marginBottom: '1.5rem' }}>
@@ -140,9 +169,10 @@ export default function ContactPage() {
             margin: '2rem auto',
             background: '#fefefe',
             border: '0.75px solid grey',
-            padding: '1.5rem',
+            padding: '1rem',
             borderRadius: '12px',
           }}
+          className="mx-4 md:mx-auto w-11/12 md:w-auto md:p-6"
         >
             <div className="flex">
                 <p className="mr-4 text-2xl">✉️</p>
