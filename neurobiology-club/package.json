@@ -12,7 +12,7 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.85.1",
     "date-fns-tz": "^3.2.0",
-    "next": "15.2.3",
+    "next": "15.2.6",
     "next-sanity": "^9.10.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
