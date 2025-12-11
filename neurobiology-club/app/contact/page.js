@@ -58,7 +58,7 @@ export default function ContactPage() {
                             height={20}
                             className="mr-14"/>
                     </div>
-                    <div className="mt-4 mr-6 hidden md:block" id="hover-wrapper">
+                    <a href="mailto:nbio-club@u.washington.edu" className="mt-4 mr-6 hidden md:block" id="hover-wrapper">
                         <Hover 
                             src="/email.svg"                        
                             hoverSrc="/hover-email.svg"                                
@@ -67,9 +67,9 @@ export default function ContactPage() {
                             height={115}
                             className="transition-color duration-200 ease-in md:block hidden"/>
                         <div id="hover-bubble">nbio-club@u.washington.edu</div>
-                    </div>
+                    </a>
                                 
-                    <div className="mt-4 hidden md:block" id="hover-wrapper">
+                    <a href="https://www.instagram.com/uwneurobiologyclub" target="_blank" rel="noopener noreferrer" className="mt-4 hidden md:block" id="hover-wrapper">
                         <Hover 
                             src="/insta.svg"
                             hoverSrc="/hover-insta.svg"
@@ -78,14 +78,14 @@ export default function ContactPage() {
                             height={115}
                             className="transition-color duration-200 ease-in md:block hidden"/> 
                         <div id="hover-bubble">@uwneurobiologyclub</div>
-                    </div>
+                    </a>
                 </div> 
             </div>
         </div>
         
         {/* Mobile Contact Icons */}
         <div className="flex justify-center items-start mb-4 md:hidden w-full">
-            <div className="mr-8 flex flex-col items-center">
+            <a href="mailto:nbio-club@u.washington.edu" className="mr-8 flex flex-col items-center">
                 <Hover 
                     src="/email.svg"                        
                     hoverSrc="/hover-email.svg"                                
@@ -94,9 +94,9 @@ export default function ContactPage() {
                     height={100}
                     className="transition-color duration-200 ease-in"/>
                 <p className="text-sm text-[#164EFF] text-center">nbio-club@u.washington.edu</p>
-            </div>
+            </a>
                         
-            <div className="flex flex-col items-center">
+            <a href="https://www.instagram.com/uwneurobiologyclub" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
                 <Hover 
                     src="/insta.svg"
                     hoverSrc="/hover-insta.svg"
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     height={100}
                     className="transition-color duration-200 ease-in"/> 
                 <p className="text-sm text-[#164EFF] text-center mt-1.5">@uwneurobiologyclub</p>
-            </div>
+            </a>
         </div>
       
         <main

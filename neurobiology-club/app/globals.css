@@ -11,6 +11,31 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-nunito-sans);
+  cursor: default;
+}
+
+/* Allow text cursor in editable elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+textarea,
+[contenteditable="true"],
+[contenteditable] {
+  cursor: text;
+}
+
+/* Keep pointer cursor for clickable elements */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  cursor: pointer;
 }
 
 @layer utilities {
@@ -38,6 +63,17 @@ nav a.active {
   font-weight: bold;
   border-radius: 100px;
   padding: 0.55rem 1rem;
+}
+
+nav a.mobile-active {
+  color: #F3FF99;
+}
+
+/* Mobile navigation links - yellow on click and when active */
+.mobile-nav-sidebar a:active,
+.mobile-nav-sidebar a.mobile-active,
+.mobile-nav-sidebar a.mobile-active:active {
+  color: #F3FF99 !important;
 }
 
 #mentorship {

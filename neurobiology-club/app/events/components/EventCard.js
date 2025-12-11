@@ -42,12 +42,14 @@ export default function EventCard({ event }) {
       {isOpen && (
         <div className="flex flex-col md:flex-row mt-12">
           {event.image && (
-            <Image
-              src = {urlFor(event.image).auto("format").url()}
-              alt = {event.name}
-              width = {375}
-              height = {375}
-              className="ml-4 mb-4 md:mb-0"/>
+            <div className="flex justify-center md:justify-start mb-4 md:mb-0">
+              <Image
+                src = {urlFor(event.image).auto("format").url()}
+                alt = {event.name}
+                width = {375}
+                height = {375}
+                className="md:ml-4"/>
+            </div>
           )}
         
           <div className={`${event.image ? "w-full md:w-1/2 md:ml-32 items-center text-center" : "ml-12 w-full items-start text-left"} 

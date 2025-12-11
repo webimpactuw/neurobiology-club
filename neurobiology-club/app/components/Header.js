@@ -15,7 +15,7 @@ export default function Header() {
   if (pathname != "/studio") {
     return (
         <nav className="pt-3 sticky top-0 pb-4 bg-gradient-to-b from-[#F4F3F2] to-[#F4F3F2]/0 z-10">
-          <div className="h-14 max-w-7xl p-4 mx-auto flex items-center justify-between">
+          <div className="h-14 px-8 flex items-center justify-between">
             {/* Mobile Hamburger Button - Left side on mobile */}
             <button 
               className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1"
@@ -70,7 +70,7 @@ export default function Header() {
           )}
           
           {/* Mobile Navigation Sidebar */}
-          <div className={`md:hidden fixed top-0 left-0 h-full w-3/4 bg-[#164EFF] shadow-lg transform transition-transform duration-300 ease-in-out z-20 rounded-r-3xl ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+          <div className={`mobile-nav-sidebar md:hidden fixed top-0 left-0 h-full w-3/4 bg-[#164EFF] shadow-lg transform transition-transform duration-300 ease-in-out z-20 rounded-r-3xl ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
             <div className="flex justify-end p-4">
               <button 
                 onClick={toggleMobileMenu}
@@ -85,7 +85,7 @@ export default function Header() {
             <ul className="flex flex-col space-y-4 p-6 text-lg font-semibold text-right text-white">
                 <Link 
                   href={"/"} 
-                  className="py-2" 
+                  className={`py-2 ${pathname === "/" ? "mobile-active" : ""}`}
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   HOME
@@ -93,7 +93,7 @@ export default function Header() {
 
                 <Link 
                   href={"/team"} 
-                  className="py-2" 
+                  className={`py-2 ${pathname === "/team" ? "mobile-active" : ""}`}
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   MEET OUR TEAM
@@ -101,7 +101,7 @@ export default function Header() {
                       
                 <Link 
                   href={"/events"} 
-                  className="py-2" 
+                  className={`py-2 ${pathname === "/events" ? "mobile-active" : ""}`}
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   EVENTS
@@ -109,7 +109,7 @@ export default function Header() {
                       
                 <Link 
                   href={"/mentorship"} 
-                  className="py-2" 
+                  className={`py-2 ${pathname === "/mentorship" ? "mobile-active" : ""}`}
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   MENTORSHIP
@@ -117,7 +117,7 @@ export default function Header() {
 
                 <Link 
                   href={"/contact"} 
-                  className="py-2" 
+                  className={`py-2 ${pathname === "/contact" ? "mobile-active" : ""}`}
                   onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 >
                   CONTACT
